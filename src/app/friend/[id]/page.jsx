@@ -43,9 +43,9 @@ const Page = ({ params }) => {
     }
 
     return (
-        <div className="p-5 px-25">
+        <div className="p-5 px-5 lg:px-25">
             {expectedFriend ? ( 
-                <div className="grid grid-cols-5 mt-20">
+                <div className="grid grid-cols-1 lg:grid-cols-5 justify-center items-center mt-20">
                     <div className="col-span-2 ">
                     <div className='p-5 rounded-lg shadow-sm flex flex-col justify-center items-center '>
                                 <div className='h-15 w-15 rounded-full overflow-hidden '>
@@ -80,8 +80,8 @@ const Page = ({ params }) => {
                         <h1 className="text-md font-semibold">Delete</h1>
                     </div>
                     </div>
-                    <div className="col-span-3  ml-5 ">
-                                    <div className="grid grid-cols-3 gap-5">
+                    <div className="col-span-3 ml-0 lg:ml-5 ">
+                                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
                                         <div className="text-center px-8 py-6 rounded-xl shadow-sm"><h1 className="text-2xl font-bold text-green-800">{expectedFriend.days_since_contact}</h1><p> days since contact</p></div>
                                         <div className="text-center px-8 py-6 rounded-xl shadow-sm"><h1 className="text-2xl font-bold text-green-800">{expectedFriend.goal}</h1><p> days Goal</p></div>
                                         <div className="text-center px-8 py-6 rounded-xl shadow-sm"><h1 className="text-2xl font-bold text-green-800">{expectedFriend.next_due_date}</h1><p>Next Due</p></div>
@@ -91,7 +91,7 @@ const Page = ({ params }) => {
                                     </div>
                                      <div className="text-start px-8 py-4 rounded-xl shadow-sm mt-5"> 
                                         <h1 className="text-lg text-green-800">Quick Check IN</h1>
-                                        <div className="grid grid-cols-3 gap-6 mt-2">
+                                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-2">
                                             <button onClick={()=> addNotification("call")} className="bg-gray-50 border-1 border-gray-400 text-center px-8 py-4 flex flex-col gap-3 justify-center items-center cursor-pointer rounded-xl">
                                                 <IoIosCall className="text-3xl"/>
                                                 <p className="text-xl">Call </p>

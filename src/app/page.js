@@ -11,7 +11,7 @@ export default function Home() {
   const {friend, loading} = useApps()
 
   return (
-      <div className="px-25">
+      <div className="px-5 lg:px-25">
       <div className="text-center flex flex-col">
 
         <h1 className="text-4xl font-bold text-gray-800 mt-10 ">Friends to keep close in your life</h1>

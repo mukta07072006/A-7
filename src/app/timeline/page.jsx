@@ -32,11 +32,11 @@ const page = () => {
     }
 
     return (
-        <div className="px-25 mt-20">
+        <div className="px-5 lg:px-25 mt-20">
             <h1 className="text-5xl font-bold">Timeline</h1>
                 <div class="dropdown">
                         <div tabindex="0" role="button" class="btn border bg-white border-gray-200 w-xs mt-5 m-1">Filter Timeline <FaAngleDown /></div>
-                            <ul tabindex="-1" class="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+                            <ul tabindex="-1" class="dropdown-content menu bg-base-100 rounded-box z-1 w-30 lg:w-52 p-2 shadow-sm">
                                 <button className="btn btn-ghost text-start" onClick={() => filter("text")}>
                                     Text
                                 </button>
