@@ -29,7 +29,7 @@ const StatsPage = () => {
     const COLORS = ['#0088FE', '#00C49F', '#FFBB28'];
 
     return (
-        <div className="mt-20 px-25 my-20">
+        <div className="mt-20 px-24 my-20">
             <h1 className="text-5xl font-bold mb-5">Statistics</h1>
             <div className="bg-base-200 rounded-xl p-10" style={{ width: '100%', height: '400px' }}>
                 <h1 className="text-xl font-medium">By Interaction Type</h1>
