@@ -15,10 +15,10 @@ const page = () => {
    
     const filter = (type) => {
         if (type === "all") {
-            setDisplayList(sortedNotifications);
+            setDisplayList(notification);
         }
         else {
-            const filtered = sortedNotifications.filter(item => item.type === type);
+            const filtered = notification.filter(item => item.type === type);
             setDisplayList(filtered);
         }
     }
