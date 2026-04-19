@@ -14,7 +14,7 @@ const Navbar = () => {
 
 
     return (
-        <div className='bg-white py-3 flex justify-between px-25'>
+        <div className='bg-white py-3 flex md:flex-row flex-col gap-4 justify-center items-center  md:justify-between px-25'>
             <div className='container mx-auto'>
                 <Image src={Logo} alt='logo'/>
             </div>

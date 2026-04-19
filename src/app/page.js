@@ -20,7 +20,7 @@ export default function Home() {
 
         <button className="flex gap-1 bg-[#244D3F] btn text-white self-center mt-4"><FaPlus/>Add Friend</button>
       </div>
-      <div className="grid grid-cols-4 gap-4 mt-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
         <div className="bg-white shadow-sm rounded-sm p-5 text-center">
           <h1 className="text-3xl font-bold text-[#244D3F]">{friend.length}</h1>
           <p>Total Friends</p>
