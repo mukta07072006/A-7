@@ -12,6 +12,14 @@ const Context = ({children}) => {
     useEffect(() => {
         localStorage.setItem("notifications", JSON.stringify(notification));
     }, [notification]);
+     useEffect(() => {
+        
+        const saved = localStorage.getItem("notifications");
+        if (saved) {
+            setNotification(JSON.parse(saved));
+        }
+    }, []);
+
 
     return (
        <ContextProvider.Provider value={data}>{children}</ContextProvider.Provider>

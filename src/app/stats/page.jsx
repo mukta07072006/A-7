@@ -1,22 +1,19 @@
 "use client"
-import React, { useEffect, useMemo, useState } from "react";
+import ContextProvider from "@/context/file";
+import React, { useContext, useEffect, useMemo, useState } from "react";
 import { Pie, PieChart, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts';
 
 const StatsPage = () => { 
-    const [data, setData] = useState([]);
+    const context = useContext(ContextProvider)
+    const {notification} = context; 
 
-    useEffect(() => {
-        const saved = window.localStorage.getItem("notifications");
-        if (saved) {
-            setData(JSON.parse(saved));
-        }
-    }, []);
+    
 
     const chartData = useMemo(() => {
         const count = {
-            text: data.filter(item => item.type === "text").length,
-            call: data.filter(item => item.type === "call").length,
-            videoCall: data.filter(item => item.type === "Video Call" || item.type === "videoCall").length,
+            text: notification.filter(item => item.type === "text").length,
+            call: notification.filter(item => item.type === "call").length,
+            videoCall: notification.filter(item => item.type === "Video Call" || item.type === "videoCall").length,
         }
 
         return [
@@ -24,7 +21,7 @@ const StatsPage = () => {
             { name: "Call", value: count.call },
             { name: "Video Call", value: count.videoCall },
         ].filter(item => item.value > 0);
-    }, [data]);
+    }, [notification]);
 
     const COLORS = ['#0088FE', '#00C49F', '#FFBB28'];
 

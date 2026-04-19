@@ -12,9 +12,7 @@ const page = () => {
 
     const [displayList, setDisplayList] = useState(notification);
 
-    const sortedNotifications = JSON.parse(localStorage.getItem("notifications"));
-
-
+   
     const filter = (type) => {
         if (type === "all") {
             setDisplayList(sortedNotifications);
